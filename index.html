@@ -1,0 +1,410 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Repor na Hora: saiba o que repor antes de esgotar | Para lojas Nuvemshop</title>
+<meta name="description" content="Repor na Hora avisa antes de um produto da sua loja Nuvemshop acabar e sugere quanto repor com base nas suas vendas. Entre na lista e teste grátis no lançamento.">
+<meta name="theme-color" content="#0b1530">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ink:#0b1530; --ink-2:#47536b; --ink-3:#7a8599; --line:#e6e9f2; --bg:#fff; --soft:#f6f8fc;
+  --brand:#4f46e5; --brand-2:#7c3aed; --brand-ink:#3730a3; --mint:#10b981; --amber:#f59e0b; --rose:#f43f5e;
+  --r:18px; --shadow:0 1px 2px rgba(11,21,48,.06),0 12px 32px -12px rgba(11,21,48,.18);
+  --shadow-lg:0 2px 4px rgba(11,21,48,.05),0 40px 80px -24px rgba(49,46,129,.35);
+  --head:"Plus Jakarta Sans",system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
+  --body:"Inter",system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{margin:0;font-family:var(--body);color:var(--ink);background:var(--bg);line-height:1.6;font-size:16.5px;-webkit-font-smoothing:antialiased}
+h1,h2,h3{font-family:var(--head);letter-spacing:-.02em;line-height:1.12;margin:0}
+p{margin:0}
+a{color:inherit}
+svg{flex:none}
+.wrap{max-width:1160px;margin:0 auto;padding:0 22px}
+.grad-text{background:linear-gradient(92deg,var(--brand) 0%,var(--brand-2) 60%,#db2777 100%);-webkit-background-clip:text;background-clip:text;color:transparent}
+
+/* NAV */
+.nav{position:sticky;top:0;z-index:20;background:rgba(255,255,255,.78);backdrop-filter:saturate(180%) blur(12px);-webkit-backdrop-filter:saturate(180%) blur(12px);border-bottom:1px solid rgba(230,233,242,.7)}
+.nav .wrap{display:flex;align-items:center;justify-content:space-between;height:66px}
+.logo{display:flex;align-items:center;gap:10px;font-family:var(--head);font-weight:800;font-size:19px;text-decoration:none;letter-spacing:-.02em}
+.logo-mark{width:32px;height:32px;border-radius:10px;background:linear-gradient(135deg,var(--brand),var(--brand-2));display:grid;place-items:center;box-shadow:0 6px 16px -6px rgba(79,70,229,.7)}
+.nav-links{display:flex;gap:28px;font-size:15px;color:var(--ink-2)}
+.nav-links a{text-decoration:none}.nav-links a:hover{color:var(--ink)}
+
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;font-family:var(--head);font-weight:700;font-size:16px;border:0;cursor:pointer;text-decoration:none;color:#fff;background:linear-gradient(135deg,var(--brand),var(--brand-2));padding:15px 24px;border-radius:12px;box-shadow:0 10px 24px -10px rgba(79,70,229,.8),inset 0 1px 0 rgba(255,255,255,.2);transition:transform .15s ease,box-shadow .15s ease}
+.btn:hover{transform:translateY(-1px);box-shadow:0 14px 30px -10px rgba(79,70,229,.9),inset 0 1px 0 rgba(255,255,255,.2)}
+.btn:focus-visible{outline:3px solid #c7d2fe;outline-offset:2px}
+.btn-sm{padding:10px 16px;font-size:14.5px;border-radius:10px}
+
+/* HERO */
+.hero{position:relative;overflow:hidden;padding:72px 0 88px;background:
+  radial-gradient(900px 480px at 85% -10%,rgba(124,58,237,.13),transparent 60%),
+  radial-gradient(700px 420px at -5% 10%,rgba(79,70,229,.10),transparent 60%),
+  linear-gradient(180deg,#fbfbff 0%,#fff 100%)}
+.hero::before{content:"";position:absolute;inset:0;background-image:radial-gradient(rgba(11,21,48,.07) 1px,transparent 1px);background-size:22px 22px;mask-image:linear-gradient(180deg,#000 0%,transparent 70%);-webkit-mask-image:linear-gradient(180deg,#000 0%,transparent 70%);pointer-events:none}
+.hero-grid{position:relative;display:grid;grid-template-columns:1.02fr 1fr;gap:56px;align-items:center}
+.pill{display:inline-flex;align-items:center;gap:8px;padding:6px 12px 6px 8px;border-radius:999px;background:#fff;border:1px solid var(--line);box-shadow:0 1px 2px rgba(11,21,48,.05);font-size:13.5px;font-weight:600;color:var(--ink-2)}
+.pill .dot{width:8px;height:8px;border-radius:50%;background:var(--mint);box-shadow:0 0 0 4px rgba(16,185,129,.18)}
+.hero h1{font-size:clamp(36px,5.4vw,60px);font-weight:800;margin:20px 0 18px}
+.hero .lead{font-size:clamp(17px,1.6vw,19.5px);color:var(--ink-2);max-width:540px}
+.hero-form{margin-top:30px;background:#fff;border:1px solid var(--line);border-radius:16px;padding:8px;box-shadow:var(--shadow);display:grid;grid-template-columns:1fr 1fr;gap:6px;max-width:560px}
+.hero-form .btn{grid-column:1/-1}
+.hero-form input{border:0;background:transparent;padding:13px 14px;font:inherit;font-size:15.5px;color:var(--ink);min-width:0;border-radius:10px}
+.hero-form input:focus{outline:none;background:var(--soft)}
+.hero-form input+input{border-left:1px solid var(--line);border-radius:0}
+.checks{display:flex;flex-wrap:wrap;gap:8px 20px;margin-top:18px;color:var(--ink-2);font-size:14.5px}
+.checks span{display:inline-flex;align-items:center;gap:7px}
+.form-msg{min-height:1.2em;font-size:14px;color:var(--rose);margin-top:10px;font-weight:500}
+
+/* MOCKUP */
+.mock-wrap{position:relative}
+.mock-wrap::before{content:"";position:absolute;inset:8% -6% -8% 6%;background:linear-gradient(135deg,rgba(79,70,229,.25),rgba(219,39,119,.18));filter:blur(48px);border-radius:40px;z-index:0}
+.mock{position:relative;z-index:1;background:#fff;border:1px solid var(--line);border-radius:20px;box-shadow:var(--shadow-lg);overflow:hidden}
+.mock-bar{display:flex;align-items:center;gap:7px;padding:12px 16px;border-bottom:1px solid var(--line);background:#fafbfe}
+.mock-bar i{width:10px;height:10px;border-radius:50%;background:#e2e5ee;display:block}
+.mock-bar .url{margin-left:12px;flex:1;max-width:260px;height:22px;border-radius:7px;background:#eef0f6;font-size:11.5px;color:var(--ink-3);display:flex;align-items:center;padding:0 10px}
+.mock-body{padding:18px 18px 20px}
+.mock-head{display:flex;align-items:center;justify-content:space-between;margin-bottom:14px}
+.mock-head h4{margin:0;font-family:var(--head);font-size:15.5px}
+.mock-head small{color:var(--ink-3);font-size:12px}
+.tag-ill{font-size:11px;font-weight:700;letter-spacing:.04em;text-transform:uppercase;color:#92400e;background:#fef3c7;border:1px solid #fde68a;padding:3px 8px;border-radius:999px}
+.alert-main{display:flex;gap:12px;padding:14px;border-radius:14px;background:linear-gradient(135deg,#fff7ed,#fff1f2);border:1px solid #fed7aa;margin-bottom:12px}
+.alert-ico{width:38px;height:38px;border-radius:11px;background:#fff;display:grid;place-items:center;box-shadow:0 4px 10px -4px rgba(244,63,94,.5)}
+.alert-main b{font-family:var(--head);font-size:14.5px;display:block}
+.alert-main p{font-size:13px;color:var(--ink-2);margin-top:2px}
+.alert-main .act{margin-top:9px;display:inline-flex;gap:6px;font-size:12px;font-weight:700;color:#fff;background:var(--ink);padding:6px 10px;border-radius:8px}
+.rows{border:1px solid var(--line);border-radius:14px;overflow:hidden}
+.row{display:grid;grid-template-columns:1.5fr 1fr auto;gap:12px;align-items:center;padding:11px 14px;font-size:13px}
+.row+.row{border-top:1px solid var(--line)}
+.row .name{font-weight:600;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.row .name small{display:block;font-weight:400;color:var(--ink-3);font-size:11.5px}
+.bar{height:7px;border-radius:99px;background:#eef0f6;overflow:hidden}
+.bar span{display:block;height:100%;border-radius:99px}
+.chip{font-size:11.5px;font-weight:700;padding:4px 8px;border-radius:999px;white-space:nowrap}
+.c-red{background:#ffe4e6;color:#be123c}.c-amb{background:#fef3c7;color:#92400e}.c-ok{background:#d1fae5;color:#047857}
+.mock-foot{margin-top:12px;font-size:11.5px;color:var(--ink-3);display:flex;align-items:center;gap:6px}
+.float{position:absolute;z-index:2;right:-20px;top:-26px;background:#fff;border:1px solid var(--line);border-radius:14px;padding:10px 14px;box-shadow:var(--shadow);display:flex;gap:10px;align-items:center;font-size:12.5px;max-width:250px}
+.float b{font-family:var(--head);display:block;font-size:13px}
+.float .wa{width:32px;height:32px;border-radius:9px;background:#dcfce7;display:grid;place-items:center}
+
+/* SECTIONS */
+section{padding:96px 0}
+.eyebrow{font-family:var(--head);font-size:13px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--brand)}
+.sec-head{max-width:680px;margin-bottom:48px}
+.sec-head h2{font-size:clamp(28px,3.6vw,42px);font-weight:800;margin:10px 0 14px}
+.sec-head p{color:var(--ink-2);font-size:17.5px}
+.center{text-align:center;margin-left:auto;margin-right:auto}
+
+.pain{background:var(--ink);color:#fff;position:relative;overflow:hidden}
+.pain::after{content:"";position:absolute;width:600px;height:600px;right:-200px;top:-260px;background:radial-gradient(circle,rgba(124,58,237,.35),transparent 65%)}
+.pain .sec-head p{color:#b6bfd4}.pain .eyebrow{color:#a5b4fc}
+.pain-grid{position:relative;z-index:1;display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.pain-card{background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.09);border-radius:var(--r);padding:24px}
+.pain-card h3{font-size:18px;margin:14px 0 8px}
+.pain-card p{color:#b6bfd4;font-size:15px}
+.pain-ico{width:40px;height:40px;border-radius:12px;background:rgba(244,63,94,.14);display:grid;place-items:center}
+
+.feat-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.feat{position:relative;background:#fff;border:1px solid var(--line);border-radius:var(--r);padding:30px 26px;box-shadow:0 1px 2px rgba(11,21,48,.04);transition:transform .2s ease,box-shadow .2s ease}
+.feat:hover{transform:translateY(-3px);box-shadow:var(--shadow)}
+.feat-ico{width:52px;height:52px;border-radius:15px;display:grid;place-items:center;margin-bottom:20px}
+.i1{background:linear-gradient(135deg,#ffe4e6,#fff1f2)}.i2{background:linear-gradient(135deg,#e0e7ff,#ede9fe)}.i3{background:linear-gradient(135deg,#d1fae5,#ecfdf5)}
+.feat h3{font-size:20px;margin-bottom:10px}
+.feat p{color:var(--ink-2);font-size:15.5px}
+
+.how{background:linear-gradient(180deg,var(--soft),#fff)}
+.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;list-style:none;margin:0;padding:0;position:relative}
+.steps::before{content:"";position:absolute;top:27px;left:16%;right:16%;height:2px;background:repeating-linear-gradient(90deg,#c7d2fe 0 8px,transparent 8px 16px)}
+.step{position:relative;text-align:center;padding:0 10px}
+.num{width:56px;height:56px;margin:0 auto 20px;border-radius:50%;display:grid;place-items:center;font-family:var(--head);font-weight:800;font-size:20px;color:var(--brand);background:#fff;border:2px solid #c7d2fe;box-shadow:0 0 0 8px var(--soft)}
+.step h3{font-size:19px;margin-bottom:8px}
+.step p{color:var(--ink-2);font-size:15.5px;max-width:300px;margin:0 auto}
+
+.faq{max-width:780px;margin:0 auto}
+details{border-bottom:1px solid var(--line);padding:6px 0}
+summary{list-style:none;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:16px;padding:16px 0;font-family:var(--head);font-weight:700;font-size:17.5px}
+summary::-webkit-details-marker{display:none}
+summary .pm{width:30px;height:30px;border-radius:50%;background:var(--soft);display:grid;place-items:center;transition:transform .2s}
+details[open] summary .pm{transform:rotate(45deg);background:#e0e7ff}
+details p{color:var(--ink-2);padding:0 46px 18px 0;font-size:16px}
+
+.final{padding:40px 0 104px}
+.cta{position:relative;overflow:hidden;border-radius:28px;padding:64px 56px;color:#fff;background:
+  radial-gradient(600px 300px at 100% 0%,rgba(219,39,119,.35),transparent 60%),
+  radial-gradient(500px 300px at 0% 100%,rgba(79,70,229,.55),transparent 60%),
+  linear-gradient(135deg,#1e1b4b,#0b1530);display:grid;grid-template-columns:1.05fr .95fr;gap:48px;align-items:center;box-shadow:var(--shadow-lg)}
+.cta h2{font-size:clamp(28px,3.6vw,42px);font-weight:800;margin-bottom:14px}
+.cta .lead{color:#c7cbe0;font-size:17.5px}
+.cta .checks{color:#c7cbe0}
+.cta-form{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.14);border-radius:20px;padding:26px;backdrop-filter:blur(6px)}
+.field{margin-bottom:14px}
+.field label{display:block;font-size:13.5px;font-weight:600;color:#dfe3f3;margin-bottom:6px}
+.field input{width:100%;padding:14px 15px;border-radius:12px;border:1px solid rgba(255,255,255,.18);background:rgba(11,21,48,.55);color:#fff;font:inherit;font-size:16px}
+.field input::placeholder{color:#8a93ad}
+.field input:focus{outline:2px solid #a5b4fc;border-color:transparent}
+.cta-form .btn{width:100%;margin-top:4px;background:linear-gradient(135deg,#fff,#eef0ff);color:var(--brand-ink);box-shadow:0 10px 24px -10px rgba(0,0,0,.6)}
+.cta-form .fine{font-size:12.5px;color:#a3abc4;margin-top:12px;text-align:center}
+.cta .form-msg{color:#fda4af}
+
+footer{border-top:1px solid var(--line);padding:28px 0;color:var(--ink-3);font-size:14px}
+footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
+
+.mbar{display:none}
+
+@media (max-width:980px){
+  .hero-grid{grid-template-columns:1fr;gap:56px}
+  .float{right:10px}
+  .feat-grid,.pain-grid{grid-template-columns:1fr}
+  .steps{grid-template-columns:1fr;gap:34px}.steps::before{display:none}
+  .cta{grid-template-columns:1fr;padding:40px 24px;gap:28px}
+  .nav-links{display:none}
+}
+@media (max-width:640px){
+  body{font-size:16px}
+  section{padding:68px 0}
+  .hero{padding:40px 0 72px}
+  .hero-form{grid-template-columns:1fr;padding:10px}
+  .hero-form input{background:var(--soft);border-radius:10px}
+  .hero-form input+input{border-left:0;border-radius:10px}
+  .hero-form .btn{width:100%}
+  .row{grid-template-columns:1.3fr .8fr auto;padding:10px 12px}
+  .float{position:relative;right:auto;top:auto;margin:14px auto 0;max-width:92%}
+  .nav .btn-sm{display:none}
+  .final{padding:20px 0 96px}
+  .mbar{display:flex;position:fixed;left:12px;right:12px;bottom:12px;z-index:30}
+  .mbar .btn{width:100%}
+  .mbar.hide{display:none}
+  footer{padding-bottom:90px}
+}
+@media (prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
+</style>
+</head>
+<body>
+
+<header class="nav">
+  <div class="wrap">
+    <a class="logo" href="#top" aria-label="Repor na Hora">
+      <span class="logo-mark"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12a9 9 0 1 1-3-6.7"/><path d="M21 4v5h-5"/><path d="M12 7v5l3 2"/></svg></span>
+      Repor na Hora
+    </a>
+    <nav class="nav-links"><a href="#beneficios">Benefícios</a><a href="#como">Como funciona</a><a href="#faq">Dúvidas</a></nav>
+    <a class="btn btn-sm" href="#lista">Quero testar grátis</a>
+  </div>
+</header>
+
+<main id="top">
+<section class="hero">
+  <div class="wrap hero-grid">
+    <div>
+      <span class="pill"><span class="dot"></span>Em desenvolvimento · feito para lojas Nuvemshop</span>
+      <h1>Saiba o que vai esgotar <span class="grad-text">antes do seu cliente.</span></h1>
+      <p class="lead">O Repor na Hora acompanha as vendas da sua loja, avisa quando um produto está perto de acabar e diz quanto repor. Assim, o botão “esgotado” deixa de derrubar a sua venda.</p>
+
+      <!-- FORMULÁRIO: o envio é feito via JS para a constante FORM_ENDPOINT (fim do arquivo). Veja README.md -->
+      <form class="hero-form js-waitlist" action="#" method="POST">
+        <input type="hidden" name="origem" value="hero">
+        <input type="hidden" name="_subject" value="Nova inscrição: Repor na Hora">
+        <input type="text" name="_honey" tabindex="-1" autocomplete="off" aria-hidden="true" style="position:absolute;left:-9999px;width:1px;height:1px;opacity:0">
+        <input name="email" type="email" required placeholder="Seu melhor e-mail" autocomplete="email" aria-label="Seu e-mail">
+        <input name="loja" type="text" required placeholder="Nome da sua loja" aria-label="Nome da sua loja Nuvemshop">
+        <button class="btn" type="submit">Quero testar grátis no lançamento</button>
+      </form>
+      <p class="form-msg" role="status" aria-live="polite"></p>
+      <div class="checks">
+        <span><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#10b981" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Teste grátis no lançamento</span>
+        <span><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#10b981" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Sem cartão de crédito</span>
+        <span><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#10b981" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Só 2 campos</span>
+      </div>
+    </div>
+
+    <div class="mock-wrap" aria-label="Ilustração do painel, com dados fictícios">
+      <div class="mock">
+        <div class="mock-bar"><i></i><i></i><i></i><span class="url">painel · Repor na Hora</span></div>
+        <div class="mock-body">
+          <div class="mock-head">
+            <div><h4>Reposição desta semana</h4><small>Sua loja · atualizado agora</small></div>
+            <span class="tag-ill">Ilustrativo</span>
+          </div>
+          <div class="alert-main">
+            <span class="alert-ico"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#f43f5e" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M10.3 3.9 1.8 18a2 2 0 0 0 1.7 3h17a2 2 0 0 0 1.7-3L13.7 3.9a2 2 0 0 0-3.4 0Z"/><path d="M12 9v4"/><path d="M12 17h.01"/></svg></span>
+            <div>
+              <b>Camiseta Básica Preta · M vai acabar em ~4 dias</b>
+              <p>Seu fornecedor leva 7 dias para entregar. Sugestão: repor 36 unidades hoje.</p>
+              <span class="act">Ver lista de compra →</span>
+            </div>
+          </div>
+          <div class="rows">
+            <div class="row"><span class="name">Caneca 350 ml<small>Branca</small></span><span class="bar"><span style="width:22%;background:linear-gradient(90deg,#f43f5e,#fb7185)"></span></span><span class="chip c-red">~6 dias</span></div>
+            <div class="row"><span class="name">Ecobag Algodão<small>Cru</small></span><span class="bar"><span style="width:48%;background:linear-gradient(90deg,#f59e0b,#fbbf24)"></span></span><span class="chip c-amb">~15 dias</span></div>
+            <div class="row"><span class="name">Boné Aba Curva<small>Azul-marinho</small></span><span class="bar"><span style="width:82%;background:linear-gradient(90deg,#10b981,#34d399)"></span></span><span class="chip c-ok">~40 dias</span></div>
+          </div>
+          <p class="mock-foot"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4M12 8h.01"/></svg>Ilustração com produtos e números fictícios. Não são dados reais.</p>
+        </div>
+      </div>
+      <div class="float">
+        <span class="wa"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="#16a34a" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.4 8.4 0 0 1-12.4 7.4L3 21l2.1-5.4A8.4 8.4 0 1 1 21 11.5Z"/></svg></span>
+        <div><b>Aviso no WhatsApp</b>“Caneca 350 ml: hora de repor.”</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="pain">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="eyebrow">O problema</span>
+      <h2>Produto esgotado é venda que você não vê ir embora.</h2>
+      <p>O cliente não avisa que desistiu. Ele só fecha a aba e procura o mesmo produto em outra loja.</p>
+    </div>
+    <div class="pain-grid">
+      <div class="pain-card"><span class="pain-ico"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#fb7185" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></span><h3>Você descobre tarde demais</h3><p>Quando o estoque zera, o pedido ao fornecedor ainda vai levar dias para chegar.</p></div>
+      <div class="pain-card"><span class="pain-ico"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#fb7185" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></svg></span><h3>A planilha não se atualiza sozinha</h3><p>Conferir variação por variação toma tempo, e é fácil algo escapar numa semana corrida.</p></div>
+      <div class="pain-card"><span class="pain-ico"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#fb7185" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg></span><h3>Comprar no chute pesa no caixa</h3><p>Sem base nas vendas, você compra demais do que gira pouco e de menos do que mais vende.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="beneficios">
+  <div class="wrap">
+    <div class="sec-head center">
+      <span class="eyebrow">O que você ganha</span>
+      <h2>Reposição no momento certo, na quantidade certa.</h2>
+      <p>Três coisas, bem feitas, para você parar de apagar incêndio no estoque.</p>
+    </div>
+    <div class="feat-grid">
+      <article class="feat">
+        <div class="feat-ico i1"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#e11d48" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 8a6 6 0 0 1 12 0c0 7 3 9 3 9H3s3-2 3-9"/><path d="M10.3 21a1.9 1.9 0 0 0 3.4 0"/></svg></div>
+        <h3>Alerta antes de acabar</h3>
+        <p>Receba o aviso por e-mail ou WhatsApp quando um produto ou variação estiver perto do fim, já considerando quantos dias o seu fornecedor leva para entregar.</p>
+      </article>
+      <article class="feat">
+        <div class="feat-ico i2"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#4f46e5" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18"/><path d="m7 15 4-4 3 3 5-6"/></svg></div>
+        <h3>Quanto repor, com base nas suas vendas</h3>
+        <p>A sugestão de compra usa o ritmo real de vendas de cada item, e não um estoque mínimo fixo chutado para o catálogo inteiro.</p>
+      </article>
+      <article class="feat">
+        <div class="feat-ico i3"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#059669" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4Z"/><path d="M3 6h18"/><path d="M16 10a4 4 0 0 1-8 0"/></svg></div>
+        <h3>Feito para Nuvemshop</h3>
+        <p>Pensado para conectar à sua loja Nuvemshop e ler produtos, variações, estoque e pedidos sozinho. Sem exportar planilha e sem mexer no layout.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="how" id="como">
+  <div class="wrap">
+    <div class="sec-head center">
+      <span class="eyebrow">Como vai funcionar</span>
+      <h2>Configure em três passos. Depois, é só receber o aviso.</h2>
+    </div>
+    <ol class="steps">
+      <li class="step"><div class="num">1</div><h3>Conecte sua loja</h3><p>Instale o app e autorize a leitura de produtos, estoque e pedidos da sua Nuvemshop.</p></li>
+      <li class="step"><div class="num">2</div><h3>Informe o prazo de reposição</h3><p>Diga quantos dias seu fornecedor leva para entregar, para a loja toda ou produto a produto.</p></li>
+      <li class="step"><div class="num">3</div><h3>Receba o alerta e a lista de compra</h3><p>Quando algo estiver perto de acabar, você recebe o aviso com a quantidade sugerida.</p></li>
+    </ol>
+  </div>
+</section>
+
+<section id="faq">
+  <div class="wrap">
+    <div class="sec-head center"><span class="eyebrow">Dúvidas</span><h2>Perguntas frequentes</h2></div>
+    <div class="faq">
+      <details open><summary>O Repor na Hora já está disponível?<span class="pm"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#4f46e5" stroke-width="2.6" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></span></summary><p>Ainda não. Está em desenvolvimento. Quem entrar na lista recebe primeiro o convite para testar grátis no lançamento.</p></details>
+      <details><summary>Preciso pagar para entrar na lista?<span class="pm"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#4f46e5" stroke-width="2.6" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></span></summary><p>Não. A lista é grátis e não pede cartão. O teste no lançamento também é grátis, e os planos pagos serão apresentados antes de qualquer cobrança.</p></details>
+      <details><summary>O app vai alterar meus produtos, preços ou estoque?<span class="pm"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#4f46e5" stroke-width="2.6" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></span></summary><p>Não. A proposta é só ler produtos, estoque e pedidos para calcular os alertas. Nada muda na sua loja.</p></details>
+      <details><summary>Funciona com variações, como tamanho e cor?<span class="pm"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#4f46e5" stroke-width="2.6" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></span></summary><p>Sim. O cálculo é feito por variação, porque é ali que a falta costuma acontecer: o P esgota enquanto o G sobra.</p></details>
+      <details><summary>É um app oficial da Nuvemshop?<span class="pm"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#4f46e5" stroke-width="2.6" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></span></summary><p>Não. É um projeto independente, feito especificamente para lojistas que usam a Nuvemshop.</p></details>
+    </div>
+  </div>
+</section>
+
+<section class="final" id="lista">
+  <div class="wrap">
+    <div class="cta">
+      <div>
+        <span class="eyebrow" style="color:#a5b4fc">Lista de lançamento</span>
+        <h2 style="margin-top:10px">Seja dos primeiros a nunca mais ser pego de surpresa pelo “esgotado”.</h2>
+        <p class="lead">Deixe seu e-mail e o nome da sua loja. Avisamos assim que o teste grátis abrir, sem spam.</p>
+        <div class="checks" style="margin-top:22px">
+          <span><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#34d399" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Grátis no lançamento</span>
+          <span><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#34d399" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Sem cartão</span>
+          <span><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#34d399" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Sai da lista quando quiser</span>
+        </div>
+      </div>
+      <!-- FORMULÁRIO: envio via JS para FORM_ENDPOINT (fim do arquivo). Veja README.md -->
+      <form class="cta-form js-waitlist" action="#" method="POST">
+        <input type="hidden" name="origem" value="rodape">
+        <input type="hidden" name="_subject" value="Nova inscrição: Repor na Hora">
+        <input type="text" name="_honey" tabindex="-1" autocomplete="off" aria-hidden="true" style="position:absolute;left:-9999px;width:1px;height:1px;opacity:0">
+        <div class="field"><label for="email2">Seu e-mail</label><input id="email2" name="email" type="email" required placeholder="voce@sualoja.com.br" autocomplete="email"></div>
+        <div class="field"><label for="loja2">Nome ou endereço da sua loja Nuvemshop</label><input id="loja2" name="loja" type="text" required placeholder="ex.: minhaloja.lojavirtualnuvem.com.br"></div>
+        <button class="btn" type="submit">Quero testar grátis no lançamento
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button>
+        <p class="form-msg" role="status" aria-live="polite"></p>
+        <p class="fine">Usamos seu e-mail só para avisar sobre o lançamento.</p>
+      </form>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap"><span>Repor na Hora (nome provisório) · projeto independente, sem vínculo com a Nuvemshop.</span><span>© 2026</span></div>
+</footer>
+
+<div class="mbar" id="mbar"><a class="btn" href="#lista">Quero testar grátis no lançamento</a></div>
+
+<script>
+  /* ====================================================================
+     CONFIGURAÇÃO DO FORMULÁRIO: troque SÓ esta constante (veja README.md)
+     - FormSubmit (recomendado, sem conta): "https://formsubmit.co/ajax/SEU_ALIAS"
+       (SEU_ALIAS = a string aleatória que o FormSubmit manda por e-mail
+        depois da confirmação; antes dela, pode usar o seu e-mail)
+     - Formspree: "https://formspree.io/f/SEU_ID"
+     Enquanto estiver vazia, o envio fica bloqueado com um aviso.
+     ==================================================================== */
+  const FORM_ENDPOINT = "";
+
+  document.querySelectorAll('.js-waitlist').forEach(function (f) {
+    var msg = f.querySelector('.form-msg') || f.parentNode.querySelector('.form-msg');
+    var btn = f.querySelector('button[type=submit]');
+    f.addEventListener('submit', function (e) {
+      e.preventDefault();
+      if (!FORM_ENDPOINT) {
+        msg.style.color = '';
+        msg.textContent = 'Formulário ainda não configurado: defina FORM_ENDPOINT no index.html (veja o README).';
+        return;
+      }
+      var data = {};
+      new FormData(f).forEach(function (v, k) { data[k] = v; });
+      if (data._honey) return; // robô preencheu o campo-armadilha
+      btn.disabled = true; var label = btn.innerHTML; btn.textContent = 'Enviando…';
+      fetch(FORM_ENDPOINT, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+        body: JSON.stringify(data)
+      }).then(function (r) {
+        if (!r.ok) throw new Error(r.status);
+        f.reset();
+        msg.style.color = '#10b981';
+        msg.textContent = 'Pronto! Você está na lista e vai receber o convite do teste grátis.';
+      }).catch(function () {
+        msg.style.color = '';
+        msg.textContent = 'Não foi possível enviar agora. Tente de novo em instantes.';
+      }).finally(function () { btn.disabled = false; btn.innerHTML = label; });
+    });
+  });
+
+  // Esconde a barra fixa do celular quando o formulário final está visível.
+  var bar = document.getElementById('mbar'), alvo = document.getElementById('lista');
+  if ('IntersectionObserver' in window) new IntersectionObserver(function (es) {
+    bar.classList.toggle('hide', es[0].isIntersecting);
+  }).observe(alvo);
+</script>
+</body>
+</html>
